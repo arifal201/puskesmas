@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   get 'pdf', to: 'sessions#pdf'
+  get 'content_pdf', to: 'sessions#content_pdf'
   resources :pasiens
 
   root to: 'sessions#welcome'
