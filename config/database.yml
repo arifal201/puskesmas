@@ -25,4 +25,6 @@ test:
 
 production:
   <<: *default
-  database: todos_prod
+  database: todos_production
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
