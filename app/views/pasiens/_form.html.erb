@@ -1,0 +1,32 @@
+<%= form_with(model: pasien, local: true) do |form| %>
+  <% if pasien.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pasien.errors.count, "error") %> prohibited this pasien from being saved:</h2>
+
+      <ul>
+      <% pasien.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nik %>
+    <%= form.text_field :nik, id: :pasien_nik %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :pasien_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat %>
+    <%= form.text_area :alamat, id: :pasien_alamat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

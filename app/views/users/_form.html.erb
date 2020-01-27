@@ -1,0 +1,31 @@
+<%= form_with(model: user, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :nik %>
+    <%= form.text_field :nik, id: :user_nik %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat %>
+    <%= form.text_area :alamat, id: :user_alamat %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_area :username, id: :user_username %>
+  </div>
+
+    <div class="field">
+    <%= form.label :password %>
+    <%= form.text_area :password, id: :user_password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,40 @@
+<h1>Halaman Setelah Login</h1>
+<% if logged_in? %>
+    <h1>You have access to this page, <%= current_user.username %></h1>
+    <%= button_to "Logout", '/logout', method: :delete %>
+<% else %>
+    <%= button_to "login", '/login', method: :get %>
+    <%= button_to "Sign Up", '/users/new', method: :get %>
+<% end %>
+
+<%= link_to 'New Pasien', new_user_path %>
+
+<table class="table table-default">
+    <thead>
+        <tr>        
+            <th>NIK</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @datapasien.each do |datauser| %>
+            <tr>
+                <td><%= datauser.nik %></td>
+                <td><%= datauser.name %></td>
+                <td><%= datauser.alamat %></td>
+                <td>
+                    <%= link_to 'Show', datauser  %>
+                </td>
+                <td>
+                    <%= link_to 'Edit', edit_user_path(datauser) %>
+                </td>
+                <td>
+                    <%= link_to 'Delete', datauser, method: :delete, data: {confirm: 'Are You Sure ? '} %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'Create PDF document', pdf_path(@datapasien, :format => :pdf) %>

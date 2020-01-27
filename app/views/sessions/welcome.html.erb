@@ -1,0 +1,161 @@
+<!-- Header -->
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Puskesmas</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">Pusat Kesehatan Masyarakat</h2>
+        <% if logged_in? %>
+            <h1>You are Logged In, <%= current_user.username %></h1>
+            <p>
+              <%= button_to "Logout", '/logout', method: :delete, class: "btn btn-primary btn-lg" %>
+            </p>
+        <% else %>
+          <p>
+            <%= button_to "login", '/login', method: :get, class: "btn btn-primary btn-lg" %>
+          </p>
+          <p>
+            <%= button_to "Sign Up", '/users/new', method: :get, class: "btn btn-primary btn-lg" %>
+          </p>
+        <% end %>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Puskesmas</h2>
+        <p class="text-white-50">
+          Pusat Kesehatan Masyarakat, atau yang disingkat dan lebih dikenal di Indonesia dengan nama Puskesmas, adalah unit pelaksana teknis (UPT) dinas kesehatan kabupaten/kota yang bertanggungjawab menyelenggarakan pembangunan kesehatan di suatu wilayah kerja UPT. Sebagai unit fungsional pelayanan kesehatan terdepan dalam unit pelaksana teknis dinas kesehatan kabupaten/ kota, tugasnya adalah menyelenggarakan sebagian tugas teknis Dinas Kesehatan Pembangunan Kesehatan. Maksudnya adalah sebagai penyelenggara upaya kesehatan seperti melaksanakan upaya penyuluhan, pencegahan dan penanganan kasus-kasus penyakit di wilayah kerjanya, secara terpadu dan terkoordinasi. Sementara pertanggung jawaban secara keseluruhan ada di Dinkes dan sebagian ada di Puskesmas. 
+        </p>
+      </div>
+    </div>
+    <img src="https://seeklogo.com/images/P/puskesmas-logo-D5EA09221D-seeklogo.com.png" class="img-fluid" alt="">
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+
+    <!-- Featured Project Row -->
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="https://assets-a1.kompasiana.com/items/album/2018/07/27/puskesmas-5b5a8f4b5a676f0a42493ec4.jpg" alt="">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4>Fungsi Puskesmas</h4>
+          <p class="text-black-50 mb-0">
+            <ul>
+              <li>Pusat Penggerak Pembangunan Berwawasan Kesehatan</li>
+              <li>Pusat Pemberdayaan Masyarakat</li>
+              <li>Pusat Pelayanan Kesehatan Strata Pertama</li>
+              <li>Pelayanan Kesehatan Perorangan</li>
+              <li>Pelayanan Kesehatan Masyarakat</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project One Row -->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="https://lh3.googleusercontent.com/-QQ9Y2XopX5g/WAbnr5qIcII/AAAAAAAABGQ/w_9RQxlsBMs/s640/1476847493720.jpg" alt="">
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">VISI</h4>
+              <p class="mb-0 text-white">
+              Visi pembangunan kesehatan yang diselenggarakan oleh Puskesmas adalah tercapainya Kecamatan Sehat menuju terwujudnya Indonesia Sehat 
+              </p>
+              <hr class="d-none d-lg-block mb-10 ml-0">
+              <p class="mb-0 text-white-50">
+                <ul class="text-white">
+                  <li>Lingkungan Sehat</li>
+                  <li>Perilaku Sehat</li>
+                  <li>Cakupan Pelayanan Kesehatan Yang Bermutu</li>
+                  <li>Derajat Kesehatan Penduduk Kecamatan</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Two Row -->
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="https://risetcdn.jatimtimes.com/images/2018/12/10/10-12-2018-14-53-39b6ab643e3279bae5.md.jpg" alt="">
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">MISI</h4>
+              <hr class="d-none d-lg-block mb-10 ml-0">
+              <ul class="text-white">
+                <li>Menggerakan pembangunan berwawasan kesehatan di wilayah kerjanya</li>
+                <li>Mendorong kemandirian hidup sehat bagi keluarga dan masyarakat di wilayah kerja</li>
+                <li>Memelihara dan meningkatkan mutu, pemerataan dan keterjangkauan pelayanan kesehatan yang diselenggarakan</li>
+                <li>Memelihara dan meningkatkan kesehatan perorangan, keluarga dan masyarakat berserta lingkungannya</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section bg-black" id="signup">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Alamat</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">Jl.Cikutra No.201</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-envelope text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Email</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">
+              <p>KelompokPuskesmas@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Phone</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">+628911234657</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Login</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+        <%= form_tag '/login' do %> 
+            <%= label_tag :username %>
+            <%= text_field_tag :username %>
+            <br>
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+            <br>
+            <%= submit_tag "Login", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+  </div>
+</header>
