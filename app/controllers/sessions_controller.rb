@@ -32,14 +32,17 @@ class SessionsController < ApplicationController
     @datapasien = User.all
   end
 
+  def content_pdf
+  end
+
   def pdf
-    # @datapasien = User.all
+    @datapasien = User.all
 
     respond_to do |format|
       format.html
       format.pdf do
         render pdf: "file_name",   # Excluding ".pdf" extension.
-        template: "sessions/welcome.html.erb",
+        template: "sessions/content_pdf.html.erb",
         layout: 'pdf.html'
       end
     end
