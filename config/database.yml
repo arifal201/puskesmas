@@ -26,3 +26,7 @@ production:
   adapter: postgresql
   encoding: unicode
   url: <%= ENV["DATABASE_URL"] %>
+  # adapter: mysql2
+  # username: root
+  # password: 123456
+  # database: todos_development
