@@ -1,6 +1,6 @@
 <h1>Halaman Setelah Login</h1>
 <% if logged_in? %>
-    <h1>You have access to this page, <%= current_user.username %></h1>
+    <h1>You have access to this page</h1>
     <%= button_to "Logout", '/logout', method: :delete %>
 <% else %>
     <%= button_to "login", '/login', method: :get %>
