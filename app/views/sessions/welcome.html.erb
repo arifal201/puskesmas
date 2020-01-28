@@ -4,16 +4,7 @@
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase">Puskesmas</h1>
       <h2 class="text-white-50 mx-auto mt-2 mb-5">Pusat Kesehatan Masyarakat</h2>
-        <% if logged_in? %>
-            <h1>You are Logged In, <%= current_user.username %></h1>
-            <p>
-              <%= button_to "Logout", '/logout', method: :delete, class: "btn btn-primary btn-lg" %>
-            </p>
-        <% else %>
-          <p>
-            <%= button_to "login", '/login', method: :get, class: "btn btn-primary btn-lg" %>
-          </p>
-        <% end %>
+
     </div>
   </div>
 </header>
