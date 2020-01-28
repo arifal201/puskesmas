@@ -21,9 +21,15 @@ test:
   database: todos_test
 
 production:
+  # adapter: postgresql
+  # encoding: unicode
+  # database: <%= ENV["POSTGRES_DB"] %>
+  # pool: 5
+  # username: <%= ENV["POSTGRES_USER"] %>
+  # password: <%= ENV["POSTGRES_PASSWORD"] %>
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV["POSTGRES_DB"] %>
+  database: dc54bl2lekqnce
   pool: 5
-  username: <%= ENV["POSTGRES_USER"] %>
-  password: <%= ENV["POSTGRES_PASSWORD"] %>
+  username: qyahvlampibbht
+  password: c52e618617ec432309cc8595ccc4630a0cd4dea8aa8fec1ec56c1387665edb86
