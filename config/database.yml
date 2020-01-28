@@ -24,9 +24,10 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  # database: <%= ENV["POSTGRES_DB"] %>
-  # username: <%= ENV["POSTGRES_USER"] %>
-  # password: <%= ENV["POSTGRES_PASSWORD"] %>
-  database: d6ibsk7kg245mc
-  username: yrcydsupsucgvs
-  password: fd50fa2c5760a1a75ab9551831d83758fbceddc551e5d36e7d768a97fb0aa239
+  database: <%= ENV["POSTGRES_DB"] %>
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
+  # database: d6ibsk7kg245mc
+  # username: yrcydsupsucgvs
+  # password: fd50fa2c5760a1a75ab9551831d83758fbceddc551e5d36e7d768a97fb0aa239
+  url: <%= ENV["HEROKU_POSTGRESQL_CHARCOAL_URL"]%>
