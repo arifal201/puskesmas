@@ -8,8 +8,6 @@ gem 'rails', '~> 5.2.3'
 
 gem 'bootstrap'
 gem 'jquery-rails'
-# Use sqlite3 as the database for Active Record
-gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -39,6 +37,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   # gem 'capybara', '>= 2.15'
   # gem 'selenium-webdriver'
+  gem 'mysql2'
 end
 
 group :development do
