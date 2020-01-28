@@ -206,7 +206,7 @@ DEPENDENCIES
   wkhtmltopdf-binary-edge (~> 0.12.4)
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.6.1p33
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
